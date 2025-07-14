@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDORTA - Materiais Plásticos Reciclados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        header {
+            background-color: #4f5b3a;
+        }
+
+        .hero {
+            background-image: url('./imagens/fundo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            width: 2px;
+            height: 20px;
+            background-color: #3b82f6;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                text-align: left;
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: 0;
+            }
+
+            .timeline-item:not(:last-child)::after {
+                left: 0;
+                transform: translateX(0);
+            }
+        }
+
+        .material-card:hover {
+            background-image: url('./imagens/');
+            background-size: cover;
+            background-position: center;
+            text-decoration-color: black;
+        }
+
+        .produtos {
+            background-image: url('./imagens/espiral.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header -->
+    <header class="shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-8" style="margin-left: 10%;">
+                <img src="imagens/logo.png" alt="MDORTA Logo" class="h-12">
+            </div>
+
+            <nav class="hidden md:flex space-x-8" style="margin-right: 10%;">
+                <a href="#sobre" class="text-white font-medium hover:text-blue-800 transition">Sobre</a>
+                <a href="#materiais" class="text-white font-medium hover:text-blue-600 transition">Materiais</a>
+                <a href="#missao" class="text-white font-medium hover:text-blue-600 transition">Missão</a>
+                <a href="#contato" class="text-white font-medium hover:text-blue-600 transition">Contato</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden  py-4 px-4 shadow-lg">
+            <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-600 transition">Sobre</a>
+            <a href="#materiais" class="block py-2 text-gray-700 hover:text-blue-600 transition">Materiais</a>
+            <a href="#missao" class="block py-2 text-gray-700 hover:text-blue-600 transition">Missão</a>
+            <a href="#contato" class="block py-2 text-gray-700 hover:text-blue-600 transition">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-[70vh] flex items-center justify-center text-white">
+
+        <div class="container mx-auto px-4 text-center" style="align-items: center;">
+            <center><img src="imagens/logo.png" style="align-self: center;"></center>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Materiais Plásticos</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Conhecimento técnico aliado à agilidade de execução
+                com uma abordagem humana</p>
+            <a href="#contato"
+                class="text-xl hover:text-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Fale
+                Conosco</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa História</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative" style="color: #4f5b3a;">
+                    <!-- Timeline -->
+                    <div class="space-y-12">
+                        <div class="timeline-item relative">
+                            <div class="bg-white p-6 rounded-lg shadow-md relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-building text-xl" style="color: #6f7c50;"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800">Fundação</h3>
+                                </div>
+                                <p class="text-gray-600"><strong>Há mais de 50 anos</strong>, nasceu em São Paulo,
+                                    Brasil, uma <strong>empresa líder</strong> no mercado de materiais plásticos: a
+                                    MDorta. Seu fundador, Maurilio Dorta, após adquirir uma <strong>vasta
+                                        experiência</strong> no setor industrial, decidiu seguir um novo caminho e se
+                                    dedicar à distribuição de materiais plásticos reciclados pós-indústria.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item relative">
+                            <div class="bg-white p-6 rounded-lg shadow-md relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-lightbulb  text-xl" style="color: #6f7c50;"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800">Propósito</h3>
+                                </div>
+                                <p class="text-gray-600">Maurilio Dorta identificou a necessidade de apoiar seus sócios
+                                    e parceiros a crescerem e manterem sua competitividade económica, ao mesmo tempo em
+                                    que melhoravam a sustentabilidade em suas cadeias de produção e comunidades.<strong>
+                                        Assim, a MDorta foi fundada com o propósito de fornecer soluções inovadoras e
+                                        sustentáveis para o mercado de materiais plásticos.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item relative">
+                            <div class="bg-white p-6 rounded-lg shadow-md relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-chart-line  text-xl" style="color: #6f7c50;"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800">Crescimento</h3>
+                                </div>
+                                <p class="text-gray-600">Desde o inicio, a MDorta se <strong>destacou pela
+                                        qualidade</strong> de seus produtos e <strong>serviços personalizados.</strong>
+                                    A empresa estabeleceu parcerias estratégicas com industrias locais, fornecendo uma
+                                    ampla gama de <strong>materiais plásticos reciclados de alta qualidade</strong>,
+                                    contribuindo para a redução dos custos de produção e <strong>promovendo a economia
+                                        circular.</strong></p>
+                                <p class="text-gray-600">Ao longo dos anos, a MDorta consolidou sua posição no mercado
+                                    brasileiro, <strong>expandindo sua atuação para todo o país.</strong> A empresa se
+                                    tornou <strong>referência em seu segmento,</strong> graças ao compromisso com a
+                                    <strong>excelência</strong> e o constante <strong>investimento</strong> em
+                                    <strong>inovação.</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item relative">
+                            <div class="bg-white p-6 rounded-lg shadow-md relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-leaf  text-xl" style="color: #6f7c50;"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800">Sustentabilidade</h3>
+                                </div>
+                                <p class="text-gray-600">Além de seu <strong>impacto positivo</strong> no setor
+                                    industrial, a MDorta também se dedicou a promover a
+                                    <strong>sustentabilidade</strong> e melhorar as comunidades onde atua. A empresa
+                                    <strong>implementou programas sociais e ambientais,</strong> contribuindo para o
+                                    desenvolvimento sustentável das regiões em que está presente.
+                                </p>
+                                <p class="text-gray-600">Com uma <strong>história de sucesso e crescimento
+                                        contínuo</strong>, a MDorta se tornou sinônimo de <strong>confiabilidade,
+                                        qualidade e compromisso</strong> com a sustentabilidade. Seu legado, iniciado
+                                    por Maurilio Dorta, inspira a próxima geração de empreendedores a buscar
+                                    <strong>soluções inovadoras</strong> e responsáveis, impulsionando um <strong>futuro
+                                        mais sustentável</strong> e competitivo para o <strong>mercado de materiais
+                                        plásticos no Brasil.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materiais" class=" py-16 bg-white">
+        <div class=" container mx-auto px-4">
+
+            <div class=" text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Materiais</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" style="color: black;">Fornecemos materiais plásticos
+                    reciclados pós-indústria de
+                    alta qualidade para diversas aplicações.</p>
+                <div class="w-24 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="produtos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Material Cards -->
+
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class=" p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">Polietileno (PEAD)</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material com alta resistência ao impacto e excelente
+                            resistência
+                            química.</p>
+                    </div>
+                </div>
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">PBT 30% Fibra</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material com excelente estabilidade dimensional e resistência
+                            a
+                            altas temperaturas.</p>
+                    </div>
+                </div>
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">ABS Liso</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material com ótimo acabamento superficial e boa resistência ao
+                            impacto.</p>
+                    </div>
+                </div>
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">Poliamida</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material de alta resistência mecânica e térmica, ideal para
+                            peças
+                            que exigem durabilidade.</p>
+                        <div class="flex items-center" style="color: #4f5b3a;">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>Opções</span>
+                        </div>
+                        <li>66 Liso</li>
+                        <li>6 Liso</li>
+                        <li>66 15% FV</li>
+                        <li>66 30% FV</li>
+                        <li>66 40% FV</li>
+                    </div>
+                </div>
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">Poliacetal</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material com excelente resistência ao desgaste e baixo
+                            coeficiente
+                            de atrito.</p>
+                        <div class="flex items-center ">
+                            <i class="fas fa-info-circle mr-2" style="color: #4f5b3a;"></i>
+                            <span>Opções</span>
+
+                        </div>
+                        <li>Natural Liso</li>
+                        <li>Natural 20%FV</li>
+                        <li>Preto Liso</li>
+                        <li>Preto 20%FV</li>
+                    </div>
+                </div>
+                <div class="material-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-600 p-4 text-white" style="background-color: #4f5b3a;">
+                        <h3 class="text-xl font-bold">Polipropileno (PP)</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Material versátil com excelente resistência química e baixa
+                            densidade.</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-info-circle mr-2" style="color: #4f5b3a;"></i>
+                            <span>Opções</span>
+                        </div>
+                        <li>Primeira linha</li>
+                        <li>Combate</li>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Galeria de Pellets -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8"><strong>Galeria de Pellets</strong></h3>
+                <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 gap-8">
+                    <div class="text-center">
+                        <img src="imagens/verde.png" alt="Pellets verdes - PP"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: green;">
+                            <h3 class="text-xl font-bold" style="color: black;">Verde</h3>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/branco.png" alt="Pellets brancos"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: white;">
+                            <h3 class="text-xl font-bold " style="color: black;">Branco / Natural</h3>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/cinza-escuro.png" alt="Pellets cinza escuro"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: gray;">
+                            <h3 class="text-xl font-bold " style="color: black;">Cinza Escuro</h3>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/cinza-claro.png" alt="Pellets cinza claro"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: gray;">
+                            <h3 class="text-xl font-bold " style="color: black;">Cinza Claro</h3>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/laranja.png" alt="Pellets laranja"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: orange;">
+                            <h3 class="text-xl font-bold " style="color: black;">Laranja</h3>
+                        </div>
+                    </div>
+                    <div class="text-center"></div>
+                    <div class="text-center"></div>
+                    <div class="text-center">
+                        <img src="imagens/cores-removebg-preview.png" alt="Pellets verdes - PP"
+                            class="rounded-lg bg-white shadow-md mx-auto mb-2">
+                        <div class="rounded-lg p-4 text-white" style="background-color: #4f5b3a;">
+                            <h3 class="text-xl font-bold" style="color: black;">Paleta de cores</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Exemplos de utilização</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <img src="imagens/cadeira-Photoroom.png" alt="Cadeiras"
+                            class="rounded-lg shadow-md mx-auto mb-2" style="height: 50%;">
+                        <p class="text-gray-700 font-medium">Cadeiras</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/baldes-Photoroom.png" alt="Baldes" class="rounded-lg shadow-md mx-auto mb-2">
+                        <p class="text-gray-700 font-medium">Baldes</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="imagens/prendedor-Photoroom.png" alt="Prendedores"
+                            class="rounded-lg shadow-md mx-auto mb-2">
+                        <p class="text-gray-700 font-medium">Prendedores</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6" style="font-size: 40px; color: #6a991a;"><strong>Nossos materiais possuem
+                        certificações:</strong></p>
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <img src="imagens/iso.png" alt="ISO 14001" class="h-20 mx-auto">
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md" style="align-items: start; font-size: 20px;">
+                        <li>ISO 9000</li>
+                        <li>ISO 14001</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="missao" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Missão, Visão e Valores</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto p-6">
+
+                <!-- Missão -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <img src="imagens/missao.png" alt="Missão" class="mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">Missão</h3>
+                    <p class="text-gray-600 text-sm">
+                        Nossa missão é ser a principal empresa de distribuição de materiais plásticos reciclados pós
+                        indústria para nossos clientes, oferecendo soluções sustentáveis e de alta qualidade. Buscamos
+                        apoiar nossos clientes na conquista de suas metas de sustentabilidade e competitividade
+                        econômica, promovendo um futuro mais sustentável para o setor industrial no Brasil.
+                    </p>
+                </div>
+
+                <!-- Visão -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <img src="imagens/visao.png" alt="Visão" class="mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">Visão</h3>
+                    <p class="text-gray-600 text-sm">
+                        Nossa visão é ser reconhecida como a parceira estratégica de confiança para nossos clientes,
+                        fornecendo materiais plásticos reciclados pós indústria de forma consistente e inovadora.
+                        Buscamos expandir nossa presença no Brasil com excelência operacional e compromisso com a
+                        sustentabilidade.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-4 rounded-full mr-4">
+                            <i class="fas fa-heart text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Valores</h3>
+                    </div>
+                    <div class="space-y-4 text-sm text-gray-700" style="text-align: justify;">
+                        <div class="flex items-start">
+                            <i class="fas fa-leaf text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Sustentabilidade:</strong> Acreditamos no poder transformador da sustentabilidade
+                                e oferecemos soluções que reduzem o impacto ambiental e promovem a economia circular.
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-award text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Excelência:</strong> Buscamos a excelência desde a seleção de materiais até o
+                                atendimento ao cliente, com foco em qualidade, pontualidade e confiança.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-handshake text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Parceria:</strong> Valorizamos relações de longo prazo com soluções
+                                personalizadas e alinhadas aos objetivos de nossos clientes.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-lightbulb text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Inovação:</strong> Investimos em pesquisa e desenvolvimento para melhorar
+                                continuamente nossos produtos e processos.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Responsabilidade social:</strong> Atuamos com ética, integridade e buscamos
+                                impacto positivo nas comunidades onde estamos.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-people-arrows text-green-500 mt-1 mr-2"></i>
+                            <p><strong>Colaboração:</strong> Acreditamos no trabalho em equipe e na cooperação para o
+                                sucesso coletivo e sustentável.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos prontos para atender suas necessidades em materiais
+                    plásticos reciclados.</p>
+                <div class="w-24 h-1 bg-green-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Informações de Contato</h3>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600" style="color: #6f7c50;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <p class="text-gray-600">+55 11 99998 6944</p>
+                                <p class="text-gray-600">+55 11 4157 2554</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600" style="color: #6f7c50;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">maurilio.dorta@mdorta.com</p>
+                                <p class="text-gray-600">andre.dorta@mdorta.com</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600" style="color: #6f7c50;"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Horário de Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 8h às 18h</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <h4 class="font-bold text-gray-800 mb-4">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <!--
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            -->
+                            <a href="https://br.linkedin.com/in/maur%C3%ADlio-dorta-76566848?trk=people-guest_people_search-card"
+                                class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Linkedin</h4>
+                                <p class="text-gray-600">Maurilio Dorta</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Envie uma Mensagem</h3>
+                    <form class="space-y-4" action="https://formspree.io/f/mjkrzkan" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Nome</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-1">Assunto</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-1">Mensagem</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class=" hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300"
+                            style="background-color: #4f5b3a;">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=" text-white py-12" style="background-color: #4f5b3a;">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="imagens/logo.png" alt="MDORTA Logo" class="h-12 mb-4">
+                    <p class="text-gray-400">Há mais de 50 anos fornecendo soluções sustentáveis em materiais plásticos
+                        reciclados.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#materiais" class="text-gray-400 hover:text-white transition">Materiais</a></li>
+                        <li><a href="#missao" class="text-gray-400 hover:text-white transition">Missão e Valores</a>
+                        </li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Materiais</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Polietileno (PEAD)</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">PBT 30% Fibra</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">ABS Liso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Poliamida</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Poliacetal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Polipropileno (PP)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 MDORTA. Todos os direitos reservados.</p>
+
+                <div class="flex space-x-6">
+                    <!--
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    -->
+                    <a href="https://br.linkedin.com/in/maur%C3%ADlio-dorta-76566848?trk=people-guest_people_search-card"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
